@@ -1,0 +1,86 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #C4C4C4;
+    
+}
+#menu{
+    width: 350px;
+    box-shadow: 0 5px 15px #00000035;
+    border-radius: 10px;
+    background-color: white;
+    position: relative;
+
+}
+#menu ul{
+    display: flex;
+}
+#menu ul li{
+    width: 70px;
+    height: 70px;
+    position: relative;
+}
+#menu ul li .icon{
+    font-size: 36px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    color: blue;
+    transition-duration: .2s;
+
+
+}
+#menu .indicator{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    border-radius: 20px;
+    position: absolute;
+    top: -20px;
+    background-color: white;
+    transition: .2s;
+    --pos
+    margin-left: calc(calc(var(--pos) *70px) + 15px)
+}
+
+
+/* #menu .indicator::after{
+    content: "";
+    width: 5px;
+    height: 5px;
+    background-color: red;
+    border-bottom-right-radius: 100%;
+    box-shadow: 0 0 0 white;
+    position: absolute;
+    top: calc(50% - 5px);
+    right: 100%;
+} */
+#menu ul li span{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: blue;
+    transition-duration: .2s;
+}
+#menu ul li.active .icon{
+    opacity: 1;
+    top: 0;
+}
+#menu ul li.active span{
+    top: 75%;
+}
